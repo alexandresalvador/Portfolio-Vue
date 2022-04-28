@@ -1,10 +1,10 @@
 <template >
   <div class="about">
     <div class="about-about" style="padding: 40px">
-      <h1>Sobre Mim</h1>
-      <div class="texto" v-for="texto in textos" :key="texto.id">
+      <h1>Educação : </h1>
+      <div class="nome" v-for="nome in nomes" :key="nome.id">
         <h2>
-          * {{texto.name}}
+          - {{nome.name}}
         </h2>
       </div>
     </div>
@@ -13,17 +13,25 @@
 <script>
 import Card from "@/components/Card.vue";
 export default {
-  name: "AboutView",
+  name: "EducationView",
   name: "about",
   components: {
     Card,
   },
   data() {
     return {
-      textos: [
+      nomes: [
         {
           id: 1,
-          name: "Sou Aluno da Quinta fase de Sistemas Para Internet na Faculdade Bom Jesus Ielusc, Unidade Centro, aqui estou estudando sobre desenvolvimento Web e Mobile. Meu objetivo aqui neste projeto é produzir um portfólio com tudo o que foi mostrado nas aulas utilizando o framework vue.js. ",
+          name: "Escola Municipal Senador Carlos Gomes de OLiveira - (2010-2016)",
+        },
+         {
+          id: 2,
+          name: "Escola Básica Professor João Rocha - (2017-2019)",
+        },
+         {
+          id: 3,
+          name: "Senai Norte I - Analise e Desenvolvimento de Sistemas - (2019-2020)",
         },
       ],
       
@@ -38,7 +46,7 @@ export default {
 </script>
 
 <style scoped>
-.texto h2 {
+.nome h2 {
   padding: 30px;
   text-align: justify;
 }
