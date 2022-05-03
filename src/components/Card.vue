@@ -1,6 +1,6 @@
 <template>
  <div class="d-flex">
-    <div v-if="exibirTrabalhos" class="card mb-5 mr-1" style="width: 18rem">
+    <div v-if="exibirTrabalhos" class="card mb-5 mr-1" >
       <img :src="trabalho.photo" class="card-img-top" />
       <div class="card-body d-flex flex-column justify-content-evenly">
         <h5 class="card-title">
@@ -12,17 +12,15 @@
         <div class="row justify-content-between">
           <div class="col-5">
             <a class="btn btn-primary">
-              <router-link
-                class="text-light text-decoration-none"
-                v-bind:to="url()"
-              >
-                Ver Mais:
-              </router-link>
+              @onclick
             </a>
           </div>
         </div>
       </div>
     </div>
+    
+
+    
   </div>
     
 
@@ -40,7 +38,7 @@ export default {
   computed: {
     exibirTrabalhos() {
       return (
-        this.$route.name === "jobs" 
+        this.$route.name === "Jobs" 
       );
     },
 

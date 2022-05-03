@@ -1,7 +1,17 @@
 <template >
   <div class="about">
     <div class="about-about" style="padding: 40px">
-      <h1>Meus trabalhos: </h1>
+      <div>
+         <h1>Meus trabalhos: </h1>
+        <a class="btn btn-primary">
+          <router-link
+            class="text-light text-decoration-none"
+            v-bind:to="url()"
+          >
+            Cadastrar Trabalhos
+          </router-link>
+        </a>
+      </div>
       <div class="trabalho" v-for="trabalho in trabalhos" :key="trabalho.id">
         <h2>
          <Card :trabalho="trabalho" />
@@ -12,11 +22,13 @@
 </template>
 <script>
 import Card from "@/components/Card.vue";
+import form2 from '@/components/FormTrabalho.vue';
 export default {
   name: "JobsView",
   name: "jobs",
   components: {
     Card,
+    form2,
   },
   data() {
     return {
@@ -33,9 +45,9 @@ export default {
     };
   },
   methods: {
-      teste(){
-          
-      }
+       url() {
+      return "/cad-trabalho";
+    },
   }
 };
 </script>

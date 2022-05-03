@@ -8,7 +8,7 @@
       <div class="label">
 
       </div>
-      <Form />
+      <!-- <Form /> -->
     </div>
   </div>
 </template>

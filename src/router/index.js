@@ -3,7 +3,8 @@ import VueRouter from 'vue-router';
 import HomeView from '@/views/HomeView.vue';
 import Education from '@/views/EducationView.vue';
 import Jobs from '@/views/JobsView.vue';
-import Contact from '@/views/ContactView.vue';
+import CadastroEscolaridade from '@/views/cadEscolaridade.vue';
+import CadastroTrabalho from '@/views/CadastroTrabalho.vue'
 
 Vue.use(VueRouter);
 
@@ -19,15 +20,25 @@ const routes = [
     component: Education,
   },
   {
+    path: "/cad-escolaridade",
+    name: "CadastroEscolaridade",
+    component: CadastroEscolaridade,
+  },
+  {
     path: '/trabalho',
     name: 'Jobs',
     component: Jobs,
   },
   {
-    path: '/contato',
-    name: 'Contact',
-    component: Contact,
+    path: "/cad-trabalho",
+    name: "CadastroTrabalho",
+    component: CadastroTrabalho,
   },
+  // {
+  //   path: '/contato',
+  //   name: 'Contact',
+  //   component: Contact,
+  // },
   {
     path: '/about',
     name: 'about',
